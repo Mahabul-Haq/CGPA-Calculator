@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>CGPA</title>        
+        <style>
+            .k{
+                margin-top: 10px;
+                margin-left: 600px;
+                background-color: violet;
+            }
+            .w1{
+                text-align: center;
+                background-color: blue;
+                color: white;
+            }
+            #k1{
+                text-align: center;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="T">
+            <h1 class="w1">CGPA CALCULATOR</h1>
+        <table class="w" style="margin-left:350px" border="3">
+            <tr>
+                <th>SEMESTER</th>
+                <th>COURSE CODE</th>
+                <th>COURSE NAME</th>
+                <th>CREDIT</th>
+            </tr>
+                <tr>
+                    <td>1</td>
+                    <td>18EGT11</td>
+                    <td>English For Communication - 1</td>
+                    <td><input type="number" placeholder="Enter your mark" name="m1">
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>18MAC11</td>
+                    <td>Mathematics - 1</td>
+                    <td><input type="number" placeholder="Enter your mark" name="m2"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>18PHC11</td>
+                    <td>Applied Physics</td>
+                    <td><input type="number" placeholder="Enter your mark" name="m3"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>18CYC11</td>
+                    <td>Applied Chemistry</td>
+                    <td><input type="number" placeholder="Enter your mark" name="m4"></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>18GET11</td>
+                    <td>Introduction to Engineering</td>
+                    <td><input type="number" placeholder="Enter your mark" name="m5"></td>
+                </tr>
+        </table>
+        <p id="k1"></p>
+        <input class="k" type="submit" value="Calculate" onclick="return Result()"></form>
+        <script>
+            function Result()
+            {
+                var a = document.getElementById("T").m1.value;
+                var b = document.getElementById("T").m2.value;
+                var c = document.getElementById("T").m3.value;
+                var d = document.getElementById("T").m4.value;
+                var e = document.getElementById("T").m5.value;
+                var f;
+                a=a/10;
+                b=b/10;
+                c=c/10;
+                d=d/10;
+                e=e/10;
+                f=(a+b+c+d+e)/5;
+                document.write(f);
+                }
+                var paragraph=document.getElementsByTagName("p");
+                document.getElementById("k1").innerHTML="!!The Result will show on Next page!!";
+        </script>
+        </body>
+</html>
